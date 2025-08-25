@@ -3,7 +3,7 @@
   "displayName": "Japanese C Language (JCL)",
   "description": "Japanese C Language with syntax highlighting, F5 execution, and file icons. Write C programs in Japanese!",
   "version": "1.0.0",
-  "publisher": "Studio.Delta",
+  "publisher": "Studio-Delta",
   "author": {
     "name": "Norifumi Kondo",
     "email": "norifumi.kondo.it@gmail.com"
