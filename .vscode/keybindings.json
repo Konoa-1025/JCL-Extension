@@ -1,0 +1,8 @@
+[
+    {
+        "key": "F5",
+        "command": "workbench.action.tasks.runTask",
+        "args": "JCL実行",
+        "when": "editorTextFocus && resourceExtname == '.jc'"
+    }
+]

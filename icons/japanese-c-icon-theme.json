@@ -1,0 +1,36 @@
+{
+  "iconDefinitions": {
+    "jcl-file": {
+      "iconPath": "./jc_icon.svg"
+    },
+    "c-file": {
+      "iconPath": "./c_icon.svg"
+    },
+    "python-file": {
+      "iconPath": "./py_icon.svg"
+    },
+    "markdown-file": {
+      "iconPath": "./md_icon.svg"
+    },
+    "executable-file": {
+      "iconPath": "./exe_icon.svg"
+    },
+    "output-file": {
+      "iconPath": "./out_icon.svg"
+    }
+  },
+  "fileExtensions": {
+    "jc": "jcl-file",
+    "c": "c-file",
+    "py": "python-file",
+    "md": "markdown-file",
+    "exe": "executable-file"
+  },
+  "fileNames": {
+    "README.md": "markdown-file",
+    "readme.md": "markdown-file"
+  },
+  "folderNames": {},
+  "folderNamesExpanded": {},
+  "hidesExplorerArrows": false
+}

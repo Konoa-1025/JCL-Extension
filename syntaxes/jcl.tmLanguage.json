@@ -1,0 +1,82 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "JapaneseC言語",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#operators"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.jc",
+                    "match": "//.*$"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.jc",
+                    "match": "\\b(もし|そうでなければもし|そうでなければ|選択|戻る)\\b"
+                },
+                {
+                    "name": "keyword.type.jc",
+                    "match": "\\b(整数型|文字型|実数型|主関数)\\b"
+                },
+                {
+                    "name": "keyword.other.jc",
+                    "match": "\\b(組み込む|定義|出力|入力|ファイル出力|ファイル入力|ファイルフォーマット出力|ファイルフォーマット入力|ファイルフラッシュ|ファイル設定|ファイル閉じる|ファイル開く|文字列文字数|文字列複製|文字列結合|メモリ確保|メモリ解放)\\b"
+                },
+                {
+                    "name": "constant.language.jc",
+                    "match": "\\b(改行)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.jc",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.jc",
+                    "match": "\\\\."
+                },
+                {
+                    "name": "constant.other.placeholder.jc",
+                    "match": "\\b(文字列|整数|実数|文字|絶対l型整数|絶対h型整数|l型整数16進|l型整数8進|l型整数|h型整数|絶対整数|整数16進|整数8進|改行)\\b|%[ldchuoxsf]|%[hl]d|%[hl]u|%[lx]"
+                }
+            ]
+        },
+        "numbers": {
+            "name": "constant.numeric.jc",
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        "variables": {
+            "name": "variable.other.jc",
+            "match": "\\b[a-zA-Z_\\u3040-\\u309F\\u30A0-\\u30FF\\u4E00-\\u9FFF][a-zA-Z0-9_\\u3040-\\u309F\\u30A0-\\u30FF\\u4E00-\\u9FFF]*\\b"
+        },
+        "operators": {
+            "name": "keyword.operator.jc",
+            "match": "(=|==|!=|<=|>=|<|>|\\+|\\-|\\*|\\/|%|&&|\\|\\||!|&|\\||\\^|~|<<|>>)"
+        }
+    },
+    "scopeName": "source.jc"
+}

@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "拡張機能開発ホスト",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"
+            ]
+        },
+        {
+            "name": "JapaneseCをビルドして実行",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/runner.py",
+            "args": [
+                "${file}"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "JCL実行（直接パス）",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "D:/Visual_Studio_Code/japanese_c_lang/runner.py",
+            "args": [
+                "${file}"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ],
+    "inputs": [
+        {
+            "id": "runnerPath",
+            "description": "runner.pyのパスを入力してください",
+            "default": "D:/Visual_Studio_Code/japanese_c_lang/runner.py",
+            "type": "promptString"
+        }
+    ],
+    "compounds": []
+}

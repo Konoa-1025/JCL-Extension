@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "JCL実行",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/runner.py",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "JCLコンパイルのみ",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/transpiler.py",
+                "${file}"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "JCLファイルが選択されているか確認",
+            "type": "shell",
+            "command": "python3 -c \"import sys; file_path = sys.argv[1] if len(sys.argv) > 1 else ''; import os; file_ext = os.path.splitext(file_path)[1] if file_path else ''; sys.exit(0) if file_ext == '.jc' else sys.exit(1)\" \"${file}\"",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "windows": {
+                "command": "python check_jc.py \"${file}\""
+            },
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+  "name": "japanese-c-language",
+  "displayName": "Japanese C Language (JCL)",
+  "description": "Japanese C Language with syntax highlighting, F5 execution, and file icons. Write C programs in Japanese!",
+  "version": "1.0.0",
+  "publisher": "Studio.Delta",
+  "author": {
+    "name": "Norifumi Kondo",
+    "email": "norifumi.kondo.it@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Konoa-1025/JapaneseCLanguage"
+  },
+  "homepage": "https://github.com/Konoa-1025/JapaneseCLanguage",
+  "bugs": {
+    "url": "https://github.com/Konoa-1025/JapaneseCLanguage/issues"
+  },
+  "keywords": [
+    "japanese",
+    "c",
+    "programming",
+    "language",
+    "syntax highlighting",
+    "日本語",
+    "プログラミング"
+  ],
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [{
+      "id": "jcl",
+      "aliases": ["JapaneseC言語", "jcl"],
+      "extensions": [".jc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "jcl",
+      "scopeName": "source.jc",
+      "path": "./syntaxes/jcl.tmLanguage.json"
+    }],
+    "iconThemes": [
+      {
+        "id": "japanese-c-icons",
+        "label": "Japanese C Icons",
+        "path": "./icons/japanese-c-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "jcl.run",
+        "title": "JCLファイルを実行",
+        "category": "JCL"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jcl.run",
+        "key": "F5",
+        "when": "editorTextFocus && resourceExtname == '.jc'"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "jcl",
+        "label": "JCL Debug",
+        "configurationAttributes": {
+          "launch": {
+            "required": ["program"],
+            "properties": {
+              "program": {
+                "type": "string",
+                "description": "実行するJCLファイルのパス",
+                "default": "${file}"
+              }
+            }
+          }
+        },
+        "initialConfigurations": [
+          {
+            "type": "jcl",
+            "request": "launch",
+            "name": "JCLを実行",
+            "program": "${file}"
+          }
+        ],
+        "configurationSnippets": [
+          {
+            "label": "JCL: ファイルを実行",
+            "description": "JCLファイルを実行する設定",
+            "body": {
+              "type": "jcl",
+              "request": "launch", 
+              "name": "JCLを実行",
+              "program": "${file}"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
