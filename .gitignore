@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules
 *.vsix
 .env
 =======
+=======
+>>>>>>> c502b7fde1266f91821acfc80f6c73fe331d06fa
 =======
 >>>>>>> c502b7fde1266f91821acfc80f6c73fe331d06fa
 # Prerequisites
@@ -62,6 +65,9 @@ dkms.conf
 # debug information files
 *.dwo
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3115403fece808c40ab5b11386572da05d39b3b0
+=======
+>>>>>>> c502b7fde1266f91821acfc80f6c73fe331d06fa
 =======
 >>>>>>> c502b7fde1266f91821acfc80f6c73fe331d06fa
