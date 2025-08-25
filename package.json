@@ -11,14 +11,19 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Konoa-1025/JapaneseCLanguage"
+    "url": "https://github.com/Konoa-1025/JCL-Extension"
   },
-  "homepage": "https://github.com/Konoa-1025/JapaneseCLanguage",
+  "homepage": "https://github.com/Konoa-1025/JCL-Extension",
   "bugs": {
-    "url": "https://github.com/Konoa-1025/JapaneseCLanguage/issues"
+    "url": "https://github.com/Konoa-1025/JCL-Extension/issues"
   },
   "keywords": [
     "japanese",
+    "jcl",
+    "JapaneseCLanguage",
+    "C言語",
+    "プログラミング言語",
+    "教育",
     "c",
     "programming",
     "language",

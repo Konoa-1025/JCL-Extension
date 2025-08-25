@@ -166,7 +166,7 @@ def transpile_jc_to_c(jc_text: str) -> str:
         
         if add_semicolon:
             processed_line += ";"
-        # 行を追加
+        
         if processed_line.startswith("printf("):
             c_lines.append(original_indent + processed_line)
             c_lines.append(original_indent + "fflush(stdout); //JCLによって自動生成されました")
