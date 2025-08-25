@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Japanese C Language (JCL) - VS Code Extension
 
 日本語でCプログラミングができるVS Code拡張機能です！
@@ -175,11 +173,3 @@ Enjoy!
 初心者でもプログラムの構造を直感的に理解できるように設計されています。
 
 この言語は、**U-22プログラミング・コンテスト**への応募作品として開発されています。
-=======
-# JCL-Extension
-JCL-Extension
->>>>>>> c502b7fde1266f91821acfc80f6c73fe331d06fa
-=======
-# JCL-Extension
-JCL-Extension
->>>>>>> c502b7fde1266f91821acfc80f6c73fe331d06fa
